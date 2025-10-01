@@ -11,6 +11,7 @@ const crypto = require('crypto');
 const path = require('path');
 
 const upload = require("./config/multerconfig");
+const { render } = require("ejs");
 
 // mongoose.connect('mongodb://localhost:27017/mini-post-app', {
 //   useNewUrlParser: true,
@@ -31,6 +32,7 @@ app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.render("index");
+  // res.render("register");
 });
 
 app.get("/profile/upload", (req, res) => {
@@ -149,7 +151,7 @@ app.post("/login", async (req, res) => {
   let user = await userModel.findOne({ email });
   if (!user) return res.status(500).redirect[{
     message: "User does not exist",
-    ref: "/login"
+    render: "/login"
   }]
 
   
