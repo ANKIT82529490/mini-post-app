@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Register</title>
+</head>
+
+<body class="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-md bg-zinc-800/70 backdrop-blur rounded-2xl shadow-xl p-8 border border-zinc-700">
+    
+    <!-- Heading -->
+    <h3 class="text-3xl font-bold mb-2 text-center">Create Account 🚀</h3>
+    <p class="text-zinc-400 text-sm mb-6 text-center">Fill in your details to get started</p>
+
+    <!-- Register Form -->
+    <form action="/register" method="post" class="space-y-5">
+
+      <!-- Full Name -->
+      <div>
+        <label class="block text-sm mb-1 text-zinc-300">Full Name</label>
+        <input 
+          class="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-500 transition" 
+          type="text" placeholder="John Doe" name="name" required>
+      </div>
+
+      <!-- Username -->
+      <div>
+        <label class="block text-sm mb-1 text-zinc-300">Username</label>
+        <input 
+          class="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-500 transition" 
+          type="text" placeholder="johndoe123" name="username" required>
+      </div>
+
+      <!-- Age -->
+      <div>
+        <label class="block text-sm mb-1 text-zinc-300">Age</label>
+        <input 
+          class="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-500 transition" 
+          type="number" placeholder="18" name="age" min="10" max="100" required>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm mb-1 text-zinc-300">Email</label>
+        <input 
+          class="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-500 transition" 
+          type="email" placeholder="you@example.com" name="email" required>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-sm mb-1 text-zinc-300">Password</label>
+        <input 
+          class="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-zinc-500 transition" 
+          type="password" placeholder="••••••••" name="password" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 active:scale-95 transition font-semibold shadow-lg">
+        Create Account
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <p class="text-center text-sm text-zinc-400 mt-6">
+      Already have an account?
+      <a href="/register" class="text-blue-500 hover:underline">Log in</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Post</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-zinc-900 via-gray-900 to-zinc-800 flex items-center justify-center min-h-screen text-gray-200">
+
+  <div class="bg-zinc-800 p-10 rounded-2xl shadow-2xl w-full max-w-md text-center transform transition duration-300 hover:scale-[1.02]">
+    
+    <!-- Header -->
+    <h1 class="text-3xl font-extrabold text-red-500 mb-4 tracking-wide">
+      ⚠️ Confirm Delete
+    </h1>
+    <p class="text-gray-300 mb-6 text-lg">
+      Are you absolutely sure you want to delete this post?
+    </p>
+
+    <!-- Post Preview -->
+    <div class="p-5 border border-red-700 rounded-lg mb-8 bg-zinc-900 text-gray-200 shadow-inner">
+      <p class="italic">"<%= post.content %>"</p>
+    </div>
+
+    <!-- Buttons -->
+    <form action="/delete/<%= post._id %>" method="POST" class="flex justify-center gap-6">
+      
+      <!-- Delete -->
+      <button type="submit" 
+              class="bg-red-600 text-white px-6 py-2 rounded-xl font-semibold shadow-md hover:bg-red-700 hover:shadow-red-900 transition duration-200 ease-in-out">
+        ✅ Yes, Delete
+      </button>
+
+      <!-- Cancel -->
+      <a href="/profile" 
+         class="bg-gray-600 text-white px-6 py-2 rounded-xl font-semibold shadow-md hover:bg-gray-500 hover:shadow-lg transition duration-200 ease-in-out">
+        ❌ Cancel
+      </a>
+    </form>
+  </div>
+
+</body>
+</html>
